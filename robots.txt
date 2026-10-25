@@ -1,0 +1,4 @@
+# M11 · Rastreo
+User-agent: *
+Allow: /
+Sitemap: https://ifenzasystems.com/sitemap.xml

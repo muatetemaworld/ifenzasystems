@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IFENZA · Sistemas que trabajan por ti</title>
+  <meta name="description" content="Ifenza implementa inteligencia artificial en pymes de España y Latinoamérica. Construye sistemas, no instala herramientas. Empieza con un Diagnóstico IA de 20 minutos.">
+  <link rel="canonical" href="https://ifenzasystems.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="IFENZA">
+  <meta property="og:title" content="IFENZA · Sistemas que trabajan por ti">
+  <meta property="og:description" content="Implementación de inteligencia artificial en pymes. Empieza con una tarea. Una sola.">
+  <meta property="og:url" content="https://ifenzasystems.com/">
+  <!-- PLACEHOLDER: imagen OG 1200×630 (lino, logotipo y rostro de Hermes) -->
+  <meta property="og:image" content="https://ifenzasystems.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="IFENZA · Sistemas que trabajan por ti. Hermes Muatetema, fundador.">
+  <!-- M08 · Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IFENZA · Sistemas que trabajan por ti">
+  <meta name="twitter:description" content="Implementación de inteligencia artificial en pymes. Empieza con una tarea. Una sola.">
+  <meta name="twitter:image" content="https://ifenzasystems.com/assets/og.jpg">
+  <meta name="theme-color" content="#F4EFE6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2B2622" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <!-- M06 · Iconos e instalación en pantalla de inicio -->
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- Favicon: símbolo simplificado de dos líneas (brandbook, pág. 12) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23A94D34'/%3E%3Cg fill='none' stroke-width='11' stroke-linecap='round'%3E%3Cpath d='M8 34 Q15 8 22 34 T36 34 T50 34' stroke='%23F4EFE6'/%3E%3Cpath d='M50 34H92' stroke='%23E8B64A'/%3E%3Cpath d='M8 66 Q15 40 22 66 T36 66 T50 66' stroke='%23F4EFE6'/%3E%3Cpath d='M50 66H92' stroke='%23E8B64A'/%3E%3C/g%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..700,100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- M05 · Preload del CSS; M29 · versionado de assets para invalidar caché al publicar -->
+  <link rel="preload" href="styles.css?v=13" as="style">
+  <link rel="stylesheet" href="styles.css?v=13">
+
+  <!-- M09 · Datos estructurados: negocio, persona, servicio «Diagnóstico IA» y preguntas frecuentes -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://ifenzasystems.com/#negocio",
+        "name": "IFENZA",
+                "description": "Sistemas inteligentes para empresas. Implementación de inteligencia artificial en pymes.",
+        "url": "https://ifenzasystems.com/",
+        "email": "hola@ifenzasystems.com",
+        "founder": { "@id": "https://ifenzasystems.com/#hermes" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
+        "areaServed": ["ES", "Latinoamérica"],
+        "sameAs": ["https://www.instagram.com/ifenzasystems", "https://www.tiktok.com/@ifenzasystems"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ifenzasystems.com/#hermes",
+        "name": "Hermes Muatetema",
+        "jobTitle": "Fundador de IFENZA",
+        "url": "https://ifenzasystems.com/#quien",
+        "sameAs": ["https://www.instagram.com/ifenzasystems"]
+      },
+      {
+        "@type": "Service",
+        "name": "Diagnóstico IA",
+        "description": "Llamada de 20 minutos: tú cuentas qué te quita tiempo y Hermes te dice si tiene sentido o no. Sin compromiso.",
+        "provider": { "@id": "https://ifenzasystems.com/#negocio" },
+        "areaServed": ["ES", "Latinoamérica"],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+      },
+      {
+        "@type": "Service",
+        "name": "Una tarea",
+        "description": "Una tarea resuelta de principio a fin en 4 a 6 semanas, con formación y tres meses de ajustes.",
+        "provider": { "@id": "https://ifenzasystems.com/#negocio" },
+        "offers": { "@type": "Offer", "price": "900", "priceCurrency": "EUR", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "900", "priceCurrency": "EUR", "valueAddedTaxIncluded": false } }
+      },
+      {
+        "@type": "Service",
+        "name": "Sistema",
+        "description": "Varias tareas encadenadas en 6 a 10 semanas, con panel, formación y documentación.",
+        "provider": { "@id": "https://ifenzasystems.com/#negocio" },
+        "offers": { "@type": "Offer", "price": "2500", "priceCurrency": "EUR", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "2500", "priceCurrency": "EUR", "valueAddedTaxIncluded": false } }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "¿Necesito saber programar?", "acceptedAnswer": { "@type": "Answer", "text": "No. Necesitas saber qué te quita tiempo. Lo demás lo montamos juntos y lo dejamos funcionando en tu día a día." } },
+          { "@type": "Question", "name": "¿Cuánto cuesta?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la tarea que haya que resolver. La llamada de 20 minutos no cuesta nada y en ella te digo si tiene sentido y qué supondría." } },
+          { "@type": "Question", "name": "¿Qué herramientas usáis?", "acceptedAnswer": { "@type": "Answer", "text": "Las que ya usas siempre que se pueda: tu correo, tu hoja de cálculo, tu WhatsApp, tu programa de facturación. Solo añadimos algo nuevo cuando hace falta." } },
+          { "@type": "Question", "name": "¿Y si la IA no sirve para mi caso?", "acceptedAnswer": { "@type": "Answer", "text": "Te lo digo en la llamada y no seguimos. Si tu problema es la caja o nadie quiere cambiar cómo trabaja, la IA no te lo resuelve." } }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!--
+  Símbolo «El cauce», construido según el brandbook (pág. 12): retícula 100×100, trazo 11 con remates redondos,
+  tres líneas en y = 22, 50 y 78; onda desde x = 8 que pierde amplitud en tres pasos (13, 9, 4) y recta desde x = 50 hasta x = 92.
+  PLACEHOLDER: sustituir este <symbol> por el contenido de logo-principal.svg / simbolo.svg oficiales cuando se publiquen.
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="cauce" viewBox="0 0 100 100">
+      <g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+        <path class="onda" stroke="var(--c-onda, #2B2622)" d="M8 22 Q15 -4 22 22 Q29 40 36 22 Q43 14 50 22 M8 50 Q15 24 22 50 Q29 68 36 50 Q43 42 50 50 M8 78 Q15 52 22 78 Q29 96 36 78 Q43 70 50 78"/>
+        <path class="carril" stroke="var(--c-carril, #A94D34)" d="M50 22H92 M50 50H92 M50 78H92"/>
+      </g>
+    </symbol>
+    <!-- Iconos lineales (Lucide, trazo 2 px) -->
+    <symbol id="i-agenda" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-factura" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+    <symbol id="i-mensaje" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-llave" viewBox="0 0 24 24"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></symbol>
+    <symbol id="i-caja" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></symbol>
+    <symbol id="i-buscar" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-lapiz" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+    <symbol id="i-herramienta" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= HERO (300vh, sticky 100vh, scrub) ================= -->
+<header class="hero is-static" id="inicio" data-hero>
+  <div class="hero-sticky">
+    <!-- Vídeo del hero, ligado al scroll (currentTime). Sin audio. El canvas Convergencia queda como respaldo (móvil, reduced-motion o si el vídeo no carga).
+         AVISO: el clip entregado el 23/10 es generado con IA (oficinas, hologramas, marca de agua «Modificado por IA»); el brandbook pide sustituirlo por el clip Convergencia o rodaje real. Mismo nombre de archivo y listo. -->
+    <video class="hero-video" data-hero-video muted playsinline preload="metadata" poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+      <source src="assets/hero-video.webm" type="video/webm">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
+    <canvas class="hero-field" aria-hidden="true"></canvas>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="hero-header">
+      <a class="logo" href="#inicio" aria-label="IFENZA. Volver al inicio">
+        <svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--tinta); --c-carril: var(--terracota)"><use href="#cauce"/></svg>
+        <span class="logo-wordmark">IFENZA</span>
+      </a>
+      <nav class="hero-nav" aria-label="Principal">
+        <a class="enlace" href="#packs">Packs</a>
+        <a class="enlace" href="trabajos.html">Trabajos</a>
+        <a class="enlace" href="nosotros.html">Nosotros</a>
+        <a class="enlace" href="recursos.html">Recursos</a>
+        <a class="enlace" href="blog.html">Blog</a>
+        <a class="enlace" href="contacto.html">Contacto</a>
+        <a class="enlace" href="#siguiente-paso">Diagnóstico IA</a>
+      </nav>
+    </div>
+
+    <div class="hero-content">
+      <!-- Acto 1 -->
+      <div class="hero-act1" data-act1>
+        <h1 class="h1">Sistemas que <span class="u">trabajan<svg class="u-stroke" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path data-underline d="M2 7 C 18 3, 36 8, 56 5 S 86 6, 98 4" pathLength="1"/></svg></span> por ti.</h1>
+        <p class="hero-sub">Implementación de inteligencia artificial en pymes. Empieza con una tarea. Una sola.</p>
+      </div>
+
+      <!-- Acto 3 -->
+      <div class="hero-act3" data-act3>
+        <h2>Ifenza construye sistemas, no instala herramientas.</h2>
+        <div class="hero-botones">
+          <!-- PLACEHOLDER: enlace al calendario (Google Calendar / Cal.com) -->
+          <a class="btn btn-principal" href="#siguiente-paso">Pedir un Diagnóstico IA · 20 min</a>
+          <a class="btn btn-secundario" href="#casos">Ver un caso real</a>
+        </div>
+      </div>
+
+      <!-- Acto 3 · Vídeo de presentación de AALIYAH ZEGNA (presentadora virtual). PLACEHOLDER: assets/aaliyah/intro.mp4 (+ .webm) y intro-poster.webp. Silencio hasta que el usuario pulsa. -->
+      <figure class="hero-photo hero-presentadora" data-photo>
+        <video data-aaliyah-hero muted playsinline loop preload="metadata" poster="assets/aaliyah/intro-poster.webp" width="800" height="1000" aria-label="Aaliyah Zegna, presentadora virtual de IFENZA, se presenta">
+          <source src="assets/aaliyah/intro.webm" type="video/webm">
+          <source src="assets/aaliyah/intro.mp4" type="video/mp4">
+        </video>
+        <figcaption class="hero-presentadora-pie"><span class="etiqueta">Aaliyah Zegna · presentadora virtual</span><button class="btn btn-lino btn-peq" type="button" data-aaliyah-hero-sonido aria-pressed="false">Escuchar</button></figcaption>
+      </figure>
+    </div>
+
+    <!-- Acto 2: lo que llega desordenado -->
+    <ul class="hero-labels" aria-hidden="true" data-labels>
+      <li class="hero-label"><span class="fila"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-agenda"/></svg><span class="etiqueta">Agenda</span></span><small>citas confirmadas a mano</small></li>
+      <li class="hero-label"><span class="fila"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-factura"/></svg><span class="etiqueta">Facturas</span></span><small>copiadas de un correo a una hoja</small></li>
+      <li class="hero-label"><span class="fila"><svg fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-mensaje"/></svg><span class="etiqueta">Mensajes</span></span><small>la misma duda, cinco veces</small></li>
+    </ul>
+    <!-- M24 · Pista de scroll: el hero mide 300vh y el usuario debe saber que hay que bajar. Se desvanece con el primer 5 % de scroll. -->
+    <p class="hero-pista" data-pista aria-hidden="true"><span>Baja</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></p>
+  </div>
+</header>
+
+<!-- M18 · Barra fija de llamada a la acción: aparece al salir del hero y se oculta en el cierre -->
+<div class="barra-cta" data-barra hidden>
+  <div class="contenedor">
+    <a class="logo" href="#inicio" aria-label="IFENZA, volver al inicio"><svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--tinta); --c-carril: var(--terracota)"><use href="#cauce"/></svg><span class="logo-wordmark">IFENZA</span></a>
+    <nav class="barra-nav" aria-label="Secciones"><a href="#packs">Packs</a><a href="trabajos.html">Trabajos</a><a href="nosotros.html">Nosotros</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></nav>
+    <span class="barra-texto">Una llamada de 20 minutos. Sin compromiso.</span>
+    <a class="btn btn-principal btn-peq" href="#siguiente-paso" data-evento="cta_barra">Diagnóstico IA</a>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <!-- 1. GANCHO · relatabilidad («esto somos nosotros»). Es la sección que se envía a un socio. -->
+  <section class="seccion seccion-compacta" id="duele" aria-labelledby="t-duele">
+    <div class="contenedor dos-col">
+      <div class="reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:24px">Lo que te quita tiempo</span>
+        <h2 id="t-duele">Escribe lo que te <span class="u">duele<svg class="u-stroke" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C 18 3, 36 8, 56 5 S 86 6, 98 4" pathLength="1"/></svg></span>, no lo que quieres.</h2>
+        <p class="apoyo" style="margin-top:24px">«Quiero IA» no es un problema. Esto sí:</p>
+        <figure class="foto">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/mujer-papeles-1600.webp" srcset="assets/mujer-papeles-800.webp 800w, assets/mujer-papeles-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Una mujer revisa papeles y una hoja de cálculo en el portátil, en una mesa de madera con luz de mañana." loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="reveal" data-delay="1">
+        <!-- M19 · Cada dolor es un enlace: al pulsarlo, los botones de WhatsApp y calendario llevan ese dolor prellenado -->
+        <ul class="dolores" role="list">
+          <li><a class="dolor" href="#siguiente-paso" data-dolor="Copiar datos de un correo a una hoja, cada día." data-evento="dolor"><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-factura"/></svg><span>Copiar datos de un correo a una hoja, cada día.</span></a></li>
+          <li><a class="dolor" href="#siguiente-paso" data-dolor="Responder cinco veces la misma duda por WhatsApp." data-evento="dolor"><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mensaje"/></svg><span>Responder cinco veces la misma duda por WhatsApp.</span></a></li>
+          <li><a class="dolor" href="#siguiente-paso" data-dolor="Confirmar citas a mano y perseguir a quien no contesta." data-evento="dolor"><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-agenda"/></svg><span>Confirmar citas a mano y perseguir a quien no contesta.</span></a></li>
+          <li><a class="dolor" href="#siguiente-paso" data-dolor="Pasar pedidos del teléfono al papel y del papel al programa." data-evento="dolor"><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-caja"/></svg><span>Pasar pedidos del teléfono al papel y del papel al programa.</span></a></li>
+          <li><a class="dolor" href="#siguiente-paso" data-dolor="Buscar una factura que ya llegó." data-evento="dolor"><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-buscar"/></svg><span>Buscar una factura que ya llegó.</span></a></li>
+        </ul>
+        <p class="paso">¿Te suena alguna? Púlsala y <a class="enlace" href="#siguiente-paso">cuéntamela en 20 minutos</a>.</p>
+        <!-- Compartir: texto prellenado con la URL de la página. Sin contador ni iconos de redes. -->
+        <p class="compartir"><a class="enlace" href="https://wa.me/?text=Esto%20nos%20pasa%20a%20nosotros%3A%20https%3A%2F%2Fifenzasystems.com%2F%23duele" target="_blank" rel="noopener" data-evento="compartir">Mándaselo a tu socio<span class="sr-only"> (se abre en una ventana nueva)</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. DISPARADOR · honestidad contra el nicho («la IA lo puede todo»). Moneda social: quien lo comparte queda como alguien con criterio. -->
+  <section class="seccion seccion-compacta bg-oliva nohace" id="no-hace" aria-labelledby="t-nohace">
+    <div class="contenedor dos-col">
+      <div class="reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:24px">Antes de seguir</span>
+        <h2 id="t-nohace">Lo que no hace la IA.</h2>
+        <figure class="foto">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/conversacion-verde-1600.webp" srcset="assets/conversacion-verde-800.webp 800w, assets/conversacion-verde-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Dos personas conversan sobre unos papeles en una mesa, frente a una pared verde." loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="reveal" data-delay="1">
+        <ul class="nohace-lista" role="list">
+          <li>Si tu problema es la caja, la IA no te lo resuelve.</li>
+          <li>Si nadie en tu equipo quiere cambiar cómo trabaja, tampoco.</li>
+          <li>Si todavía no sabes qué te quita tiempo, primero lo medimos. Eso sí.</li>
+        </ul>
+        <p class="paso">Si tu caso es uno de estos, <a class="enlace" href="#siguiente-paso">te lo digo en la llamada</a> y no seguimos.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Webs construidas (capturas reales del 24/10/2026, assets/trabajo-<slug>-*.webp). Para añadir una: copiar un <li> y regenerar la captura. -->
+  <section class="seccion seccion-compacta" id="webs" aria-labelledby="t-webs">
+    <div class="contenedor">
+      <div class="seccion-cabecera reveal" style="margin-bottom:32px">
+        <span class="etiqueta">Webs que hemos construido</span>
+        <h2 id="t-webs">Lo que ya está hecho.</h2>
+      </div>
+      <ul class="trabajos" role="list">
+        <li class="trabajo reveal"><a href="https://www.juddugestu.com" rel="noopener" target="_blank" data-trabajo="juddugestu" data-evento="trabajo_juddugestu"><div class="trabajo-panel panel-tinta"><h3>JUDDUGËSTU</h3><figure class="trabajo-captura trabajo-video" data-video-preview><video muted playsinline loop preload="metadata" poster="assets/trabajo-juddugestu-1-800.webp" aria-label="Recorrido por la web en ordenador y en móvil"><source src="assets/trabajo-juddugestu.webm" type="video/webm"><source src="assets/trabajo-juddugestu.mp4" type="video/mp4"></video></figure></div><span class="etiqueta">Cómic manga · 2026</span><p>Web de un cómic manga shonen con detalles inspirados en África: historia, razas, elenco y campaña de mecenazgo.<span class="sr-only"> (se abre en una ventana nueva)</span></p></a></li>
+        <li class="trabajo reveal" data-delay="1"><a href="https://www.tonioempire.com" rel="noopener" target="_blank" data-trabajo="tonio-empire" data-evento="trabajo_tonio_empire"><div class="trabajo-panel panel-oliva"><h3>EMPIRE by Tonio Amoah</h3><figure class="trabajo-captura trabajo-video" data-video-preview><video muted playsinline loop preload="metadata" poster="assets/trabajo-tonio-empire-1-800.webp" aria-label="Recorrido por la web en ordenador y en móvil"><source src="assets/trabajo-tonio-empire.webm" type="video/webm"><source src="assets/trabajo-tonio-empire.mp4" type="video/mp4"></video></figure></div><span class="etiqueta">Marca personal · 2026</span><p>Web personal del empresario Tonio Amoah: su presentación en vídeo, quién es y su comunidad, en inglés y español.<span class="sr-only"> (se abre en una ventana nueva)</span></p></a></li>
+        <li class="trabajo reveal" data-delay="2"><a href="https://www.jipjopurbanparty.com" rel="noopener" target="_blank" data-trabajo="jipjop-urban-party" data-evento="trabajo_jipjop_urban_party"><div class="trabajo-panel panel-terracota"><h3>JIPJOP Urban Party</h3><figure class="trabajo-captura trabajo-video" data-video-preview><video muted playsinline loop preload="metadata" poster="assets/trabajo-jipjop-urban-party-1-800.webp" aria-label="Recorrido por la web en ordenador y en móvil"><source src="assets/trabajo-jipjop-urban-party.webm" type="video/webm"><source src="assets/trabajo-jipjop-urban-party.mp4" type="video/mp4"></video></figure></div><span class="etiqueta">Evento urbano · 2026</span><p>Web de una fiesta urbana semanal de hip hop y R&B en Valencia: fechas, entradas, reservas de mesa, fotos y blog.<span class="sr-only"> (se abre en una ventana nueva)</span></p></a></li>
+        <li class="trabajo reveal" data-delay="2"><a href="https://aaliyahzegna.my.canva.site/" rel="noopener" target="_blank" data-trabajo="aaliyah-zegna" data-evento="trabajo_aaliyah_zegna"><div class="trabajo-panel panel-ambar"><h3>Aaliyah Zegna</h3><figure class="trabajo-captura trabajo-video" data-video-preview><video muted playsinline loop preload="metadata" poster="assets/trabajo-aaliyah-zegna-1-800.webp" aria-label="Recorrido por la web en ordenador y en móvil"><source src="assets/trabajo-aaliyah-zegna.webm" type="video/webm"><source src="assets/trabajo-aaliyah-zegna.mp4" type="video/mp4"></video></figure></div><span class="etiqueta">Modelo UGC · 2026</span><p>Portafolio de una modelo UGC: quién es, vídeos por sector, tarifas y proceso de creación.<span class="sr-only"> (se abre en una ventana nueva)</span></p></a></li>
+      </ul>
+      <p class="paso reveal"><a class="enlace" href="trabajos.html">Ver todos los trabajos</a></p>
+    </div>
+  </section>
+  <!-- 3. Marquee de sectores. Confirmar que cada sector tiene trabajo real detrás antes de publicar. -->
+  <section class="marquee" aria-label="Sectores en los que trabajamos">
+    <!-- M14 · Control de pausa (WCAG 2.2.2) para el movimiento continuo -->
+    <button class="marquee-pausa" type="button" data-marquee-pausa aria-pressed="false" aria-label="Pausar el movimiento de los sectores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg></button>
+    <div class="marquee-track" data-marquee>
+      <ul class="etiqueta">
+        <li>Gestoría</li><li>Clínica dental</li><li>Ferretería</li><li>Hostelería</li><li>Logística</li><li>Eventos</li>
+      </ul>
+      <ul class="etiqueta" aria-hidden="true">
+        <li>Gestoría</li><li>Clínica dental</li><li>Ferretería</li><li>Hostelería</li><li>Logística</li><li>Eventos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Sistemas, no herramientas -->
+  <section class="seccion" id="sistemas" aria-labelledby="t-sistemas">
+    <div class="contenedor">
+      <div class="seccion-cabecera reveal">
+        <span class="etiqueta">Sistemas, no herramientas</span>
+        <h2 id="t-sistemas">Nunca vendemos una app. Cambiamos cómo se trabaja.</h2>
+      </div>
+      <ul class="tarjetas" role="list">
+        <li class="tarjeta reveal">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-reloj"/></svg>
+          <h3>Un sistema sigue funcionando cuando no estamos.</h3>
+          <p>Una herramienta es una app más en el móvil. Un sistema es un proceso que no depende de nadie, tampoco de nosotros.</p>
+        </li>
+        <li class="tarjeta reveal" data-delay="1">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-llave"/></svg>
+          <h3>Lo sencillo es un acto de respeto.</h3>
+          <p>Simplificar no es simplismo: es el trabajo bien hecho. Si tu equipo necesita un manual para usarlo, no está terminado.</p>
+        </li>
+        <li class="tarjeta reveal" data-delay="2">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-caja"/></svg>
+          <h3>Resultados en semanas.</h3>
+          <p>Una tarea resuelta y luego otra. Sin grandes planes que nadie termina.</p>
+        </li>
+      </ul>
+      <figure class="banda reveal">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/pareja-portatil-1600.webp" srcset="assets/pareja-portatil-800.webp 800w, assets/pareja-portatil-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Dos personas miran juntas la pantalla de un portátil en una mesa de madera, con una taza y un cuaderno." loading="lazy" decoding="async">
+        </figure>
+      <p class="paso reveal">Elige una tarea. <a class="enlace" href="#siguiente-paso">Empezamos por ahí</a>.</p>
+    </div>
+  </section>
+
+  <!-- 5. Cómo trabajamos -->
+  <section class="seccion" id="metodo" aria-labelledby="t-metodo" style="padding-top:0">
+    <div class="contenedor metodo">
+      <div class="seccion-cabecera reveal" style="margin-bottom:0">
+        <span class="etiqueta">Cómo trabajamos</span>
+        <h2 id="t-metodo">Tres pasos. Ninguno es instalar algo.</h2>
+        <p class="paso">Empieza con una tarea. Una sola. <a class="enlace" href="#siguiente-paso">La elegimos juntos</a>.</p>
+        <figure class="foto">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/equipo-pared-1600.webp" srcset="assets/equipo-pared-800.webp 800w, assets/equipo-pared-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Tres personas revisan un esquema de pasos colgado en una pared, junto a una mesa con un portátil." loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <ol class="pasos" data-pasos>
+        <li class="paso-item">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-buscar"/></svg>
+          <h3>Detectar <small>· semana 1</small></h3>
+          <p>Qué te quita tiempo. Lo medimos contigo, en tu negocio, antes de proponer nada. Tú pones una hora y acceso a cómo lo haces hoy.</p>
+        </li>
+        <li class="paso-item">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lapiz"/></svg>
+          <h3>Diseñar <small>· semanas 2 y 3</small></h3>
+          <p>Una solución a tu medida, con las herramientas que ya usas siempre que se pueda. Recibes una demo con tus datos antes de pagar el segundo hito.</p>
+        </li>
+        <li class="paso-item">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-herramienta"/></svg>
+          <h3>Integrar <small>· semanas 4 a 6</small></h3>
+          <p>En tu día a día, con tu equipo, hasta que funcione sola. Formación de una hora a quien lo vaya a usar.</p>
+        </li>
+        <li class="paso-item">
+          <svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-reloj"/></svg>
+          <h3>Después <small>· meses 1 a 3</small></h3>
+          <p>Ajustes incluidos durante tres meses. Luego, si quieres, una cuota de evolución mensual sin permanencia. El sistema es tuyo: código, accesos y documentación.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- N01 · Packs de trabajo con precios orientativos.
+       PRECIOS PENDIENTES DE APROBACIÓN DE HERMES. Referencias: propuesta interna de oct 2026 (implantación 900–1.500 €, cuota 150–250 €/mes)
+       y mercado español (Aimoova 180–10.000 €, Javadex 5.000–12.000 €). Cambiar las cifras aquí y en el JSON-LD. -->
+  <section class="seccion" id="packs" aria-labelledby="t-packs">
+    <div class="contenedor">
+      <div class="seccion-cabecera reveal">
+        <span class="etiqueta">Packs de trabajo</span>
+        <h2 id="t-packs">Lo que cuesta, antes de llamar.</h2>
+      </div>
+      <p class="apoyo reveal">Precios orientativos, sin IVA. El presupuesto cerrado se entrega por escrito después del diagnóstico y no cambia por el camino. Para Latinoamérica, el equivalente en dólares en la llamada.</p>
+
+      <ul class="packs" role="list">
+        <li class="pack reveal">
+          <span class="etiqueta">Diagnóstico IA</span>
+          <p class="pack-precio"><span class="cifra">0</span> €</p>
+          <p class="pack-sub">20 minutos, sin compromiso</p>
+          <ul class="pack-lista" role="list">
+            <li>Me cuentas qué te quita tiempo</li>
+            <li>Te digo si tiene sentido o no</li>
+            <li>Te llevas un mapa de 3 tareas y por cuál empezar</li>
+          </ul>
+          <a class="btn btn-secundario" href="#siguiente-paso" data-evento="pack_diagnostico">Reservar</a>
+        </li>
+        <li class="pack pack-recomendado reveal" data-delay="1">
+          <span class="etiqueta">Una tarea <span class="pack-tag">Recomendado</span></span>
+          <p class="pack-precio">desde <span class="cifra">900</span> €</p>
+          <p class="pack-sub">4 a 6 semanas · una tarea en producción</p>
+          <ul class="pack-lista" role="list">
+            <li>Una tarea resuelta de principio a fin</li>
+            <li>Con tus herramientas: correo, hoja, WhatsApp, programa</li>
+            <li>Formación de una hora a tu equipo</li>
+            <li>Tres meses de ajustes incluidos</li>
+          </ul>
+          <a class="btn btn-secundario" href="#siguiente-paso" data-evento="pack_tarea">Hablarlo</a>
+        </li>
+        <li class="pack reveal" data-delay="2">
+          <span class="etiqueta">Sistema</span>
+          <p class="pack-precio">desde <span class="cifra">2.500</span> €</p>
+          <p class="pack-sub">6 a 10 semanas · varias tareas encadenadas</p>
+          <ul class="pack-lista" role="list">
+            <li>Dos o más tareas que se pasan el trabajo entre sí</li>
+            <li>Un panel sencillo para ver qué ha hecho el sistema</li>
+            <li>Formación al equipo y documentación</li>
+            <li>Tres meses de ajustes incluidos</li>
+          </ul>
+          <a class="btn btn-secundario" href="#siguiente-paso" data-evento="pack_sistema">Hablarlo</a>
+        </li>
+        <li class="pack reveal" data-delay="2">
+          <span class="etiqueta">Evolución</span>
+          <p class="pack-precio">desde <span class="cifra">150</span> €<span class="pack-mes">/mes</span></p>
+          <p class="pack-sub">Opcional · sin permanencia</p>
+          <ul class="pack-lista" role="list">
+            <li>Revisión mensual de lo que funciona y lo que no</li>
+            <li>Pequeños cambios cuando cambia tu negocio</li>
+            <li>Respuesta en 24 horas laborables</li>
+          </ul>
+          <a class="btn btn-secundario" href="contacto.html" data-evento="pack_evolucion">Preguntar</a>
+        </li>
+      </ul>
+
+      <!-- N09 garantía · N13 pago por hitos · N12 qué pagas aparte · N27 propiedad -->
+      <ul class="reglas" role="list">
+        <li class="reveal"><h3>Alcance cerrado por escrito</h3><p>Qué entra, qué no y qué pasa si algo cambia. Si al terminar no hace lo acordado, lo arreglo sin coste.</p></li>
+        <li class="reveal" data-delay="1"><h3>Pagas por hitos: 40 · 30 · 30</h3><p>Al empezar, al ver la demo con tus datos y cuando funciona en tu día a día. Nunca pagas por adelantado trabajo que no has visto.</p></li>
+        <li class="reveal" data-delay="2"><h3>Lo que va aparte</h3><p>El consumo de la IA y de las herramientas lo pagas tú a cada proveedor, sin margen mío. En una pyme suele estar entre 20 y 80 € al mes; te lo digo antes de empezar.</p></li>
+        <li class="reveal" data-delay="2"><h3>El sistema es tuyo</h3><p>Código, accesos, cuentas y documentación a tu nombre. Si un día no quieres seguir conmigo, sigue funcionando.</p></li>
+      </ul>
+
+      <!-- N15 sistemas con nombre (empaquetado por tarea) -->
+      <div class="nombrados reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:16px">Lo que suele salir de la llamada</span>
+        <ul role="list">
+          <li><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-factura"/></svg><span><strong>Facturas que entran solas.</strong> Llegan por correo o WhatsApp, el sistema saca los datos, una persona valida y van a tu hoja o a tu programa.</span></li>
+          <li><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mensaje"/></svg><span><strong>Asistente de WhatsApp.</strong> Responde las dudas de siempre con tus respuestas, pasa el resto a una persona y no inventa.</span></li>
+          <li><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-agenda"/></svg><span><strong>Agenda que se confirma sola.</strong> Confirma, recuerda y recoloca citas; tú solo ves las que fallan.</span></li>
+          <li><svg class="icono" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-caja"/></svg><span><strong>Pedidos sin pasar a mano.</strong> Del teléfono o el correo al programa, con un aviso cuando falta un dato.</span></li>
+        </ul>
+      </div>
+
+      <!-- N11 calculadora: horas → euros al año (coste de la tarea hoy, no promesa de ahorro) -->
+      <div class="calculadora reveal" data-calculadora>
+        <div>
+          <span class="etiqueta" style="display:block;margin-bottom:12px">Cuánto te cuesta hoy esa tarea</span>
+          <h3>Pon horas y tu coste por hora. El resto lo calculamos.</h3>
+          <p>Es el coste de hacerlo a mano, no una promesa de ahorro. Lo que se pueda recuperar lo vemos en la llamada.</p>
+        </div>
+        <form class="calc-form" onsubmit="return false">
+          <label>Horas a la semana en la tarea<input type="number" name="horas" min="0.5" max="80" step="0.5" value="5" inputmode="decimal"></label>
+          <label>Personas que la hacen<input type="number" name="personas" min="1" max="50" step="1" value="1" inputmode="numeric"></label>
+          <label>Coste por hora (€)<input type="number" name="coste" min="5" max="200" step="1" value="22" inputmode="decimal"></label>
+          <output class="calc-resultado" aria-live="polite"><span class="cifra" data-calc-total>5.060</span> € al año<small data-calc-detalle>230 horas al año</small></output>
+        </form>
+      </div>
+
+      <!-- N21 comparativa con / sin -->
+      <div class="comparativa reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:16px">Con qué lo comparas</span>
+        <table>
+          <thead><tr><th scope="col"></th><th scope="col">Seguir a mano</th><th scope="col">Una herramienta suelta</th><th scope="col">Ifenza</th><th scope="col">Consultora grande</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Qué pagas</th><td>Horas de tu equipo cada mes</td><td>Cuota mensual por cada app</td><td>Desde 900 € una vez, cuota opcional</td><td>Desde decenas de miles</td></tr>
+            <tr><th scope="row">Quién lo adapta a ti</th><td>Nadie</td><td>Tú, con tutoriales</td><td>Yo, con tu equipo</td><td>Un equipo que rota</td></tr>
+            <tr><th scope="row">Cuándo funciona</th><td>Nunca del todo</td><td>Si alguien la mantiene</td><td>En 4 a 6 semanas</td><td>En meses</td></tr>
+            <tr><th scope="row">Si no funciona</th><td>Sigues igual</td><td>Dejas de pagarla</td><td>Lo arreglo o no cobro el último hito</td><td>Depende del contrato</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- N35 versión para responsables de operaciones en empresas grandes -->
+      <aside class="grande reveal" aria-labelledby="t-grande">
+        <span class="etiqueta" style="display:block;margin-bottom:12px">Si llevas operaciones en una empresa grande</span>
+        <h3 id="t-grande">Un piloto acotado de seis semanas, con un responsable y una métrica.</h3>
+        <p>Elegimos un proceso de un departamento, lo medimos, lo montamos con tus sistemas y tus reglas de datos, y lo entregamos documentado para que tu equipo técnico lo pueda mantener. Si funciona, se replica; si no, lo sabes en seis semanas y no en un año.</p>
+        <p class="paso"><a class="enlace" href="contacto.html?origen=grande">Cuéntame el proceso</a></p>
+      </aside>
+
+      <p class="paso reveal">¿No sabes qué pack encaja? <a class="enlace" href="recursos.html#test">Cinco preguntas y te lo digo</a>.</p>
+    </div>
+  </section>
+
+  <!-- Divisor Convergencia: fotografía de la mesa con los hilos de cobre (de la turbulencia al carril). Sin personas. -->
+  <figure class="divisor-foto" aria-hidden="true">
+    <img src="assets/mesa-hilos-1600.webp" srcset="assets/mesa-hilos-800.webp 800w, assets/mesa-hilos-1600.webp 1600w" sizes="100vw" width="1600" height="900" alt="" loading="lazy" decoding="async">
+  </figure>
+
+  <!-- 5. Casos reales -->
+  <section class="seccion" id="casos" aria-labelledby="t-casos">
+    <div class="contenedor">
+      <div class="seccion-cabecera reveal">
+        <span class="etiqueta">Casos reales</span>
+        <h2 id="t-casos">Lo que pasó en negocios de verdad.</h2>
+      </div>
+
+      <!--
+        PLACEHOLDER DE CASO REAL.
+        Regla: ninguna cifra, cliente ni testimonio sin caso medido detrás.
+        Cuando exista un caso: quitar la clase «es-placeholder», rellenar etiqueta (CASO REAL · SECTOR · N PERSONAS),
+        titular, tres líneas de contexto y la cifra en la caja ámbar (.caso-cifra).
+      -->
+      <article class="caso es-placeholder reveal" aria-label="Primer caso real, pendiente de publicar">
+        <div>
+          <span class="etiqueta">Caso real · Sector · N personas</span>
+          <h3>Primer caso en curso.</h3>
+          <p>Aquí irá el primer caso con su sector, el tamaño del equipo y una cifra medida. Hasta que exista, no publicamos ninguna.</p>
+        </div>
+        <div class="caso-cifra" aria-hidden="true">
+          <span class="cifra">00</span>
+          <small>unidad medida</small>
+        </div>
+      </article>
+
+      <figure class="banda reveal">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/tres-portatil-1600.webp" srcset="assets/tres-portatil-800.webp 800w, assets/tres-portatil-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Tres personas sonríen mirando un portátil en una mesa de madera, con una taza de terracota." loading="lazy" decoding="async">
+        </figure>
+      <p class="paso reveal">Mientras tanto, <a class="enlace" href="trabajos.html">mira lo que suele quitar tiempo en tu sector</a> o <a class="enlace" href="#siguiente-paso">pregúntame</a>.</p>
+    </div>
+  </section>
+
+  <!-- M23 · Preguntas frecuentes honestas (details nativo, sin JS). Espejo del FAQPage del JSON-LD. -->
+  <section class="seccion faq" id="preguntas" aria-labelledby="t-faq" style="padding-top:0">
+    <div class="contenedor dos-col">
+      <div class="reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:24px">Preguntas frecuentes</span>
+        <h2 id="t-faq">Lo que me preguntan antes de la llamada.</h2>
+        <figure class="foto">
+          <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
+          <img src="assets/mujer-cuaderno-1600.webp" srcset="assets/mujer-cuaderno-800.webp 800w, assets/mujer-cuaderno-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Una mujer toma notas en un cuaderno frente a un portátil, con una pared terracota detrás." loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <div class="reveal" data-delay="1">
+        <details class="faq-item" name="faq">
+          <summary>¿Necesito saber programar?</summary>
+          <p>No. Necesitas saber qué te quita tiempo. Lo demás lo montamos juntos y lo dejamos funcionando en tu día a día.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Depende de la tarea que haya que resolver. La llamada de 20 minutos no cuesta nada y en ella te digo si tiene sentido y qué supondría.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Qué herramientas usáis?</summary>
+          <p>Las que ya usas siempre que se pueda: tu correo, tu hoja de cálculo, tu WhatsApp, tu programa de facturación. Solo añadimos algo nuevo cuando hace falta.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Y si la IA no sirve para mi caso?</summary>
+          <p>Te lo digo en la llamada y no seguimos. Si tu problema es la caja o nadie quiere cambiar cómo trabaja, la IA no te lo resuelve.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Cuánto tarda?</summary>
+          <p>Una tarea, entre cuatro y seis semanas. Un sistema con varias tareas, entre seis y diez. El primer entregable que ves con tus datos llega antes de la tercera semana.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Qué pasa con mis datos?</summary>
+          <p>Se quedan en tus cuentas. Las herramientas que uso se contratan a tu nombre, y donde hay datos de clientes trabajamos con proveedores que cumplen el RGPD y con servidores en la Unión Europea siempre que exista la opción. Quien hable con un asistente sabrá que es un asistente.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿De quién es el sistema cuando termina?</summary>
+          <p>Tuyo. Código, accesos y documentación a tu nombre. La cuota de evolución es opcional y sin permanencia.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Trabajas con empresas de Latinoamérica?</summary>
+          <p>Sí, en remoto. Horario de trabajo de 9 a 18 h en Madrid (de 2 a 11 h en Ciudad de México, de 4 a 13 h en Buenos Aires). Precio equivalente en dólares, se cierra en la llamada.</p>
+        </details>
+        <details class="faq-item" name="faq">
+          <summary>¿Cuántos proyectos llevas a la vez?</summary>
+          <p>Pocos. Acepto dos o tres proyectos nuevos al mes para poder estar en cada uno. Si no hay hueco, te digo la fecha en la llamada.</p>
+        </details>
+        <p class="paso"><a class="enlace" href="#siguiente-paso">Si tienes otra, me la haces en la llamada</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Quién está detrás -->
+  <section class="seccion" id="quien" aria-labelledby="t-quien" style="padding-top:0">
+    <div class="contenedor quien">
+      <figure class="quien-foto reveal">
+        <img src="assets/hermes-retrato-1600.webp" srcset="assets/hermes-retrato-800.webp 800w, assets/hermes-retrato-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1122" height="1402" alt="Hermes Muatetema, fundador de IFENZA, en su mesa de trabajo con una taza de té y un plano." loading="lazy" decoding="async">
+      </figure>
+      <div class="quien-texto reveal" data-delay="1">
+        <span class="etiqueta" style="display:block;margin-bottom:24px">Quién está detrás</span>
+        <h2 id="t-quien">Soy Hermes.</h2>
+        <p style="margin-top:24px">Trabajo con dueños de pymes que no tienen tiempo para experimentos. Mi método es corto: detecto qué te quita tiempo, diseño una solución a tu medida y la integro en tu día a día hasta que funciona sola. No necesitas saber programar. Necesitas saber qué te duele. Lo demás lo hacemos juntos, a tu ritmo.</p>
+        <p class="paso"><a class="enlace" href="nosotros.html">Conoce al equipo</a> <span aria-hidden="true">·</span> <a class="enlace" href="https://www.instagram.com/ifenzasystems" rel="me noopener" target="_blank">@ifenzasystems</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Cierre -->
+  <section class="cierre bg-terracota" id="siguiente-paso" aria-labelledby="t-paso">
+    <div class="contenedor">
+      <div class="reveal">
+        <span class="etiqueta" style="display:block;margin-bottom:24px">Diagnóstico IA</span>
+        <h2 id="t-paso">Siguiente paso</h2>
+        <p class="apoyo" style="margin-top:24px">Lo vemos en una llamada de 20 minutos: tú me cuentas qué te quita tiempo y yo te digo si tiene sentido o no. Sin compromiso.</p>
+        <div class="cierre-botones">
+          <!-- PLACEHOLDER: enlace de calendario (p. ej. https://calendar.app.google/XXXX o https://cal.com/ifenza/diagnostico) -->
+          <a class="btn btn-tinta" href="contacto.html#reservar" data-calendario data-evento="cta_calendario">Reservar el Diagnóstico IA</a>
+          <!-- PLACEHOLDER: número de WhatsApp Business en formato internacional sin «+» -->
+          <!-- Cuando exista el número de WhatsApp Business: href="https://wa.me/34XXXXXXXXX?text=..." y texto «Escribir por WhatsApp» -->
+          <a class="btn btn-lino" href="mailto:hola@ifenzasystems.com?subject=Diagn%C3%B3stico%20IA&body=Hola%20Hermes%2C%20quiero%20un%20Diagn%C3%B3stico%20IA.%20Lo%20que%20m%C3%A1s%20tiempo%20me%20quita%20es%3A%20" data-correo-cta data-evento="cta_correo_boton">
+            <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mensaje"/></svg>
+            Escribir un correo
+          </a>
+        </div>
+        <!-- N08 · Qué te llevas de la llamada -->
+        <p class="cierre-entregable">Te llevas, por escrito y el mismo día: las tres tareas que más tiempo te quitan, por cuál empezar y qué pack encaja. Aunque no sigamos.</p>
+        <!-- M20 · Alternativa por correo con asunto prellenado (para quien no usa WhatsApp ni quiere reservar ahora) -->
+        <p class="cierre-alt">O escribe a <a class="enlace" href="mailto:hola@ifenzasystems.com?subject=Diagn%C3%B3stico%20IA&body=Hola%20Hermes%2C%20lo%20que%20m%C3%A1s%20tiempo%20me%20quita%20es%3A%20" data-correo data-evento="cta_correo">hola@ifenzasystems.com</a>.</p>
+      </div>
+      <!-- M22 · Qué pasa en los 20 minutos: quita el miedo a la llamada -->
+      <ol class="llamada reveal" role="list" aria-label="Cómo son los 20 minutos">
+        <li><span class="cifra">5</span><span>minutos: me cuentas qué te quita tiempo.</span></li>
+        <li><span class="cifra">10</span><span>minutos: te hago preguntas sobre cómo lo haces hoy.</span></li>
+        <li><span class="cifra">5</span><span>minutos: te digo si tiene sentido o no, y por dónde empezar.</span></li>
+      </ol>
+    </div>
+    <svg class="cierre-marca" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--lino); --c-carril: var(--lino)"><use href="#cauce"/></svg>
+  </section>
+
+</main>
+
+<!-- 8. Footer -->
+<footer class="footer bg-tinta">
+  <div class="contenedor footer-grid">
+    <div>
+      <a class="logo logo-negativo" href="#inicio" aria-label="IFENZA, volver al inicio">
+        <svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--lino); --c-carril: var(--ambar)"><use href="#cauce"/></svg>
+        <span class="logo-wordmark">IFENZA</span>
+      </a>
+      <p class="footer-firma">IFENZA<br>Sistemas inteligentes para empresas.<br>Valencia · España y Latinoamérica</p>
+    </div>
+    <nav aria-label="Páginas">
+      <span class="etiqueta">Web</span>
+      <a href="#packs">Packs y precios</a>
+      <a href="trabajos.html">Trabajos realizados</a>
+      <a href="recursos.html">Recursos y dossiers</a>
+      <a href="blog.html">Blog</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <nav aria-label="Canales">
+      <span class="etiqueta">Canales</span>
+      <a href="https://www.instagram.com/ifenzasystems" rel="me noopener" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@ifenzasystems" rel="me noopener" target="_blank">TikTok</a>
+      <a href="mailto:hola@ifenzasystems.com">hola@ifenzasystems.com</a>
+    </nav>
+    <div>
+      <span class="etiqueta">Al grano</span>
+      <p class="footer-news">Un caso o una tarea resuelta, cada dos semanas. Sin novedades de la industria.</p>
+      <!-- N23 · Newsletter: sustituir action por el proveedor (Mailchimp, Brevo, Substack…). Mientras, envía un correo con el asunto «Al grano». -->
+      <form class="news-form" action="mailto:hola@ifenzasystems.com?subject=Alta%20en%20Al%20grano" method="get" data-evento="newsletter">
+        <label class="sr-only" for="news-email">Tu correo</label>
+        <input id="news-email" type="email" name="body" placeholder="tu@correo.com" required autocomplete="email">
+        <button class="btn btn-lino btn-peq" type="submit">Apuntarme</button>
+      </form>
+    </div>
+  </div>
+  <div class="contenedor footer-legal">
+    <span>© 2026 IFENZA</span>
+    <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
+  </div>
+</footer>
+
+<!-- M01 · GSAP lo carga main.js solo en escritorio y sin prefers-reduced-motion; en móvil o si no carga, usa scroll + requestAnimationFrame. -->
+
+<!-- AALIYAH ZEGNA · presentadora virtual en vídeo. Un clip por sección en assets/aaliyah/ (ver LEEME.txt). Si falta el clip, se muestra el poster. -->
+<aside class="aaliyah" data-aaliyah aria-label="Aaliyah Zegna, presentadora virtual, te acompaña por la web" hidden>
+  <button class="aaliyah-video-btn" type="button" data-aaliyah-toggle aria-expanded="true" aria-label="Mostrar u ocultar a Aaliyah">
+    <video class="aaliyah-video" data-aaliyah-video muted playsinline loop preload="metadata" poster="assets/aaliyah/poster.webp" aria-hidden="true"></video>
+    <span class="aaliyah-chip">Virtual</span>
+  </button>
+  <div class="aaliyah-tarjeta" data-aaliyah-tarjeta>
+    <p class="aaliyah-nombre"><strong>Aaliyah Zegna</strong><span>te acompaña</span></p>
+    <p class="aaliyah-texto" data-aaliyah-texto aria-live="polite"></p>
+    <div class="aaliyah-acciones">
+      <button class="btn btn-secundario btn-peq" type="button" data-aaliyah-siguiente>Siguiente</button>
+      <button class="aaliyah-voz" type="button" data-aaliyah-voz aria-pressed="false" aria-label="Activar el sonido de Aaliyah"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></svg></button>
+      <button class="aaliyah-cerrar" type="button" data-aaliyah-cerrar aria-label="Cerrar">×</button>
+    </div>
+  </div>
+</aside>
+<script src="main.js?v=12" defer></script>
+</body>
+</html>
