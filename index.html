@@ -35,8 +35,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..700,100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- M05 · Preload del CSS; M29 · versionado de assets para invalidar caché al publicar -->
-  <link rel="preload" href="styles.css?v=13" as="style">
-  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="preload" href="styles.css?v=14" as="style">
+  <link rel="stylesheet" href="styles.css?v=14">
 
   <!-- M09 · Datos estructurados: negocio, persona, servicio «Diagnóstico IA» y preguntas frecuentes -->
   <script type="application/ld+json">
@@ -155,6 +155,7 @@
         <a class="enlace" href="contacto.html">Contacto</a>
         <a class="enlace" href="#siguiente-paso">Diagnóstico IA</a>
       </nav>
+      <button class="menu-btn" type="button" data-menu-abrir aria-label="Abrir el menú" aria-expanded="false" aria-controls="menu-movil"><span></span><span></span><span></span></button>
     </div>
 
     <div class="hero-content">
@@ -202,6 +203,7 @@
     <nav class="barra-nav" aria-label="Secciones"><a href="#packs">Packs</a><a href="trabajos.html">Trabajos</a><a href="nosotros.html">Nosotros</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></nav>
     <span class="barra-texto">Una llamada de 20 minutos. Sin compromiso.</span>
     <a class="btn btn-principal btn-peq" href="#siguiente-paso" data-evento="cta_barra">Diagnóstico IA</a>
+    <button class="menu-btn" type="button" data-menu-abrir aria-label="Abrir el menú" aria-expanded="false" aria-controls="menu-movil"><span></span><span></span><span></span></button>
   </div>
 </div>
 
@@ -677,6 +679,27 @@
     </div>
   </div>
 </aside>
-<script src="main.js?v=12" defer></script>
+
+<!-- Menú móvil (se abre con el botón de tres rayas) -->
+<div class="menu-movil" id="menu-movil" data-menu hidden>
+  <div class="menu-movil-cabecera">
+    <span class="logo-wordmark">IFENZA</span>
+    <button class="menu-cerrar" type="button" data-menu-cerrar aria-label="Cerrar el menú">×</button>
+  </div>
+  <nav class="menu-movil-nav" aria-label="Menú">
+    <a href="#inicio">Inicio</a>
+    <a href="#packs">Packs y precios</a>
+    <a href="trabajos.html">Trabajos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="recursos.html">Recursos</a>
+    <a href="blog.html">Blog</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+  <div class="menu-movil-pie">
+    <a class="btn btn-principal" href="contacto.html#reservar" data-evento="cta_menu_movil">Reservar el Diagnóstico IA</a>
+    <a class="enlace" href="mailto:hola@ifenzasystems.com">hola@ifenzasystems.com</a>
+  </div>
+</div>
+<script src="main.js?v=13" defer></script>
 </body>
 </html>

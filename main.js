@@ -679,3 +679,31 @@
     m.addEventListener('click', play, { once: true });
   });
 })();
+
+/* v13 · Menú móvil: botón de tres rayas → panel a pantalla completa */
+(function () {
+  var menu = document.querySelector('[data-menu]');
+  if (!menu) return;
+  var botones = document.querySelectorAll('[data-menu-abrir]');
+  var cerrarBtn = menu.querySelector('[data-menu-cerrar]');
+  var ultimo = null;
+  function abrir(origen) {
+    ultimo = origen; menu.hidden = false;
+    requestAnimationFrame(function () { menu.classList.add('is-abierto'); });
+    document.body.classList.add('menu-abierto');
+    Array.prototype.forEach.call(botones, function (b) { b.setAttribute('aria-expanded', 'true'); });
+    if (cerrarBtn) cerrarBtn.focus();
+  }
+  function cerrar() {
+    menu.classList.remove('is-abierto');
+    document.body.classList.remove('menu-abierto');
+    Array.prototype.forEach.call(botones, function (b) { b.setAttribute('aria-expanded', 'false'); });
+    setTimeout(function () { menu.hidden = true; }, 200);
+    if (ultimo && ultimo.focus) ultimo.focus();
+  }
+  Array.prototype.forEach.call(botones, function (b) { b.addEventListener('click', function () { abrir(b); }); });
+  if (cerrarBtn) cerrarBtn.addEventListener('click', cerrar);
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) cerrar(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) cerrar(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1023 && !menu.hidden) cerrar(); });
+})();
