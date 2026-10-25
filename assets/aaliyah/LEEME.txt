@@ -1,0 +1,10 @@
+Clips de Aaliyah Zegna (presentadora virtual)
+Formato: MP4 H.264 (y WebM opcional), 4:5 (800x1000) o 9:16, sin texto incrustado, fondo neutro cálido, 8-20 s.
+Nombres (uno por sección; si falta alguno se usa el poster):
+  intro.mp4                       → hero (presentación general)
+  index-duele.mp4, index-no-hace.mp4, index-sistemas.mp4, index-metodo.mp4, index-packs.mp4, index-casos.mp4, index-preguntas.mp4, index-quien.mp4, index-siguiente-paso.mp4
+  contacto-inicio.mp4, contacto-reservar.mp4
+  trabajos-inicio.mp4, trabajos-casos.mp4, trabajos-sectores.mp4
+  recursos-inicio.mp4, recursos-test.mp4, recursos-datos.mp4
+  guia-que-automatizar-primero-inicio.mp4
+Posters: poster.webp (acompañante) e intro-poster.webp (hero), 800x1000.
