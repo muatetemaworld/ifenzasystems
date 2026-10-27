@@ -1134,3 +1134,5 @@ h2 .acento { display: inline-block; }
 .seccion-cabecera h2, .pagina-hero h1 { max-width: 9.5em; overflow-wrap: anywhere; }
 .bio-galeria .bio-foto:nth-child(2), .bio-galeria .bio-foto:nth-child(3) { aspect-ratio: 4 / 3; }
 .bio-foto-grande { aspect-ratio: auto; }
+
+.hero-header .logo .logo-simbolo { --c-onda: var(--lino) !important; --c-carril: var(--ambar) !important; }
