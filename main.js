@@ -127,6 +127,7 @@
   if (hero) {
     var canvas = hero.querySelector('.hero-field');
     var act1 = hero.querySelector('[data-act1]');
+    var persona = hero.querySelector('[data-persona]');
     var act3 = hero.querySelector('[data-act3]');
     var photo = hero.querySelector('[data-photo]');
     var underline = hero.querySelector('[data-underline]');
@@ -163,7 +164,7 @@
 
     function applyProgress(p) {
       // Acto 1 (0–33 %): el trazo ámbar se dibuja con el primer 10 % de scroll
-      underline.style.strokeDashoffset = String(1 - clamp(p / 0.10));
+      if (underline) underline.style.strokeDashoffset = String(1 - clamp(p / 0.10));
 
       // Acto 2 (33–66 %): el campo se ordena de izquierda a derecha
       var q = clamp((p - 0.33) / 0.33);
@@ -192,6 +193,7 @@
       act1.style.transform = 'translateY(' + (-16 * out) + 'px)';
       act1.style.pointerEvents = out > 0.5 ? 'none' : '';
       act1.style.visibility = out >= 1 ? 'hidden' : '';          // M16 · fuera del orden de tabulación y del lector
+      if (persona) { persona.style.opacity = String(1 - clamp(out * 1.6)); persona.style.transform = 'translateY(' + (24 * out) + 'px)'; }
 
       var inn = clamp((p - 0.70) / 0.14);
       act3.style.opacity = String(inn);

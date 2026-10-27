@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IFENZA · Sistemas que trabajan por ti</title>
+  <title>IFENZA SYSTEMS · Sistemas que trabajan por ti</title>
   <meta name="description" content="Ifenza implementa inteligencia artificial en pymes de España y Latinoamérica. Construye sistemas, no instala herramientas. Empieza con un Diagnóstico IA de 20 minutos.">
   <link rel="canonical" href="https://ifenzasystems.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
-  <meta property="og:site_name" content="IFENZA">
+  <meta property="og:site_name" content="IFENZA SYSTEMS">
   <meta property="og:title" content="IFENZA · Sistemas que trabajan por ti">
   <meta property="og:description" content="Implementación de inteligencia artificial en pymes. Empieza con una tarea. Una sola.">
   <meta property="og:url" content="https://ifenzasystems.com/">
@@ -29,14 +29,14 @@
   <link rel="apple-touch-icon" href="assets/icon-180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <!-- Favicon: símbolo simplificado de dos líneas (brandbook, pág. 12) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23A94D34'/%3E%3Cg fill='none' stroke-width='11' stroke-linecap='round'%3E%3Cpath d='M8 34 Q15 8 22 34 T36 34 T50 34' stroke='%23F4EFE6'/%3E%3Cpath d='M50 34H92' stroke='%23E8B64A'/%3E%3Cpath d='M8 66 Q15 40 22 66 T36 66 T50 66' stroke='%23F4EFE6'/%3E%3Cpath d='M50 66H92' stroke='%23E8B64A'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..700,100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=EB+Garamond:ital,wght@1,400..800&family=Pinyon+Script&family=Reenie+Beanie&display=swap" rel="stylesheet">
   <!-- M05 · Preload del CSS; M29 · versionado de assets para invalidar caché al publicar -->
-  <link rel="preload" href="styles.css?v=14" as="style">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="preload" href="styles.css?v=15" as="style">
+  <link rel="stylesheet" href="styles.css?v=15">
 
   <!-- M09 · Datos estructurados: negocio, persona, servicio «Diagnóstico IA» y preguntas frecuentes -->
   <script type="application/ld+json">
@@ -46,7 +46,7 @@
       {
         "@type": "ProfessionalService",
         "@id": "https://ifenzasystems.com/#negocio",
-        "name": "IFENZA",
+        "name": "IFENZA SYSTEMS",
                 "description": "Sistemas inteligentes para empresas. Implementación de inteligencia artificial en pymes.",
         "url": "https://ifenzasystems.com/",
         "email": "hola@ifenzasystems.com",
@@ -134,17 +134,15 @@
   <div class="hero-sticky">
     <!-- Vídeo del hero, ligado al scroll (currentTime). Sin audio. El canvas Convergencia queda como respaldo (móvil, reduced-motion o si el vídeo no carga).
          AVISO: el clip entregado el 23/10 es generado con IA (oficinas, hologramas, marca de agua «Modificado por IA»); el brandbook pide sustituirlo por el clip Convergencia o rodaje real. Mismo nombre de archivo y listo. -->
-    <video class="hero-video" data-hero-video muted playsinline preload="metadata" poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture>
-      <source src="assets/hero-video.webm" type="video/webm">
-      <source src="assets/hero-video.mp4" type="video/mp4">
-    </video>
     <canvas class="hero-field" aria-hidden="true"></canvas>
     <div class="hero-veil" aria-hidden="true"></div>
 
+    <img class="hero-persona" data-persona src="assets/hermes-recorte-1100.webp" srcset="assets/hermes-recorte-640.webp 640w, assets/hermes-recorte-1100.webp 1100w" sizes="(max-width: 767px) 70vw, 34vw" width="1024" height="1205" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
+
     <div class="hero-header">
-      <a class="logo" href="#inicio" aria-label="IFENZA. Volver al inicio">
+      <a class="logo" href="#inicio" aria-label="IFENZA SYSTEMS. Volver al inicio">
         <svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--tinta); --c-carril: var(--terracota)"><use href="#cauce"/></svg>
-        <span class="logo-wordmark">IFENZA</span>
+        <span class="logo-wordmark"><span class="lk-word">IFENZA</span><span class="lk-sub" aria-hidden="true"><span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span><span>S</span></span></span>
       </a>
       <nav class="hero-nav" aria-label="Principal">
         <a class="enlace" href="#packs">Packs</a>
@@ -161,13 +159,15 @@
     <div class="hero-content">
       <!-- Acto 1 -->
       <div class="hero-act1" data-act1>
-        <h1 class="h1">Sistemas que <span class="u">trabajan<svg class="u-stroke" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path data-underline d="M2 7 C 18 3, 36 8, 56 5 S 86 6, 98 4" pathLength="1"/></svg></span> por ti.</h1>
-        <p class="hero-sub">Implementación de inteligencia artificial en pymes. Empieza con una tarea. Una sola.</p>
+        <p class="hero-acento" aria-hidden="true">sistemas que</p>
+        <h1 class="h1"><span class="sr-only">Sistemas que </span>trabajan<br>por ti</h1>
+        <p class="hero-sub">Implementación de inteligencia artificial en pymes.<br>Empieza con una tarea. Una sola.</p>
       </div>
 
       <!-- Acto 3 -->
       <div class="hero-act3" data-act3>
-        <h2>Ifenza construye sistemas, no instala herramientas.</h2>
+        <p class="hero-acento hero-acento-3" aria-hidden="true">sistemas,</p>
+        <h2><span class="sr-only">Sistemas, </span>no herramientas.</h2>
         <div class="hero-botones">
           <!-- PLACEHOLDER: enlace al calendario (Google Calendar / Cal.com) -->
           <a class="btn btn-principal" href="#siguiente-paso">Pedir un Diagnóstico IA · 20 min</a>
@@ -199,7 +199,7 @@
 <!-- M18 · Barra fija de llamada a la acción: aparece al salir del hero y se oculta en el cierre -->
 <div class="barra-cta" data-barra hidden>
   <div class="contenedor">
-    <a class="logo" href="#inicio" aria-label="IFENZA, volver al inicio"><svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--tinta); --c-carril: var(--terracota)"><use href="#cauce"/></svg><span class="logo-wordmark">IFENZA</span></a>
+    <a class="logo" href="#inicio" aria-label="IFENZA SYSTEMS, volver al inicio"><svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--tinta); --c-carril: var(--terracota)"><use href="#cauce"/></svg><span class="logo-wordmark"><span class="lk-word">IFENZA</span><span class="lk-sub" aria-hidden="true"><span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span><span>S</span></span></span></a>
     <nav class="barra-nav" aria-label="Secciones"><a href="#packs">Packs</a><a href="trabajos.html">Trabajos</a><a href="nosotros.html">Nosotros</a><a href="recursos.html">Recursos</a><a href="blog.html">Blog</a><a href="contacto.html">Contacto</a></nav>
     <span class="barra-texto">Una llamada de 20 minutos. Sin compromiso.</span>
     <a class="btn btn-principal btn-peq" href="#siguiente-paso" data-evento="cta_barra">Diagnóstico IA</a>
@@ -214,7 +214,7 @@
     <div class="contenedor dos-col">
       <div class="reveal">
         <span class="etiqueta" style="display:block;margin-bottom:24px">Lo que te quita tiempo</span>
-        <h2 id="t-duele">Escribe lo que te <span class="u">duele<svg class="u-stroke" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C 18 3, 36 8, 56 5 S 86 6, 98 4" pathLength="1"/></svg></span>, no lo que quieres.</h2>
+        <h2 id="t-duele"><span class="acento">escribe</span> lo que te duele, no lo que quieres.</h2>
         <p class="apoyo" style="margin-top:24px">«Quiero IA» no es un problema. Esto sí:</p>
         <figure class="foto">
           <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
@@ -242,7 +242,7 @@
     <div class="contenedor dos-col">
       <div class="reveal">
         <span class="etiqueta" style="display:block;margin-bottom:24px">Antes de seguir</span>
-        <h2 id="t-nohace">Lo que no hace la IA.</h2>
+        <h2 id="t-nohace"><span class="acento">lo que</span> no hace la IA.</h2>
         <figure class="foto">
           <!-- Foto generada con IA (entregada el 23/10). El brandbook pide foto real: sustituir por la sesión de Hermes cuando exista, mismo nombre de archivo. -->
           <img src="assets/conversacion-verde-1600.webp" srcset="assets/conversacion-verde-800.webp 800w, assets/conversacion-verde-1600.webp 1600w" sizes="(max-width: 1023px) 92vw, 560px" width="1600" height="900" alt="Dos personas conversan sobre unos papeles en una mesa, frente a una pared verde." loading="lazy" decoding="async">
@@ -265,7 +265,7 @@
     <div class="contenedor">
       <div class="seccion-cabecera reveal" style="margin-bottom:32px">
         <span class="etiqueta">Webs que hemos construido</span>
-        <h2 id="t-webs">Lo que ya está hecho.</h2>
+        <h2 id="t-webs"><span class="acento">lo que</span> ya está hecho.</h2>
       </div>
       <ul class="trabajos" role="list">
         <li class="trabajo reveal"><a href="https://www.juddugestu.com" rel="noopener" target="_blank" data-trabajo="juddugestu" data-evento="trabajo_juddugestu"><div class="trabajo-panel panel-tinta"><h3>JUDDUGËSTU</h3><figure class="trabajo-captura trabajo-video" data-video-preview><video muted playsinline loop preload="metadata" poster="assets/trabajo-juddugestu-1-800.webp" aria-label="Recorrido por la web en ordenador y en móvil"><source src="assets/trabajo-juddugestu.webm" type="video/webm"><source src="assets/trabajo-juddugestu.mp4" type="video/mp4"></video></figure></div><span class="etiqueta">Cómic manga · 2026</span><p>Web de un cómic manga shonen con detalles inspirados en África: historia, razas, elenco y campaña de mecenazgo.<span class="sr-only"> (se abre en una ventana nueva)</span></p></a></li>
@@ -366,7 +366,7 @@
     <div class="contenedor">
       <div class="seccion-cabecera reveal">
         <span class="etiqueta">Packs de trabajo</span>
-        <h2 id="t-packs">Lo que cuesta, antes de llamar.</h2>
+        <h2 id="t-packs">Lo que cuesta, <span class="acento">antes</span> de llamar.</h2>
       </div>
       <p class="apoyo reveal">Precios orientativos, sin IVA. El presupuesto cerrado se entrega por escrito después del diagnóstico y no cambia por el camino. Para Latinoamérica, el equivalente en dólares en la llamada.</p>
 
@@ -579,7 +579,7 @@
       </figure>
       <div class="quien-texto reveal" data-delay="1">
         <span class="etiqueta" style="display:block;margin-bottom:24px">Quién está detrás</span>
-        <h2 id="t-quien">Soy Hermes.</h2>
+        <h2 id="t-quien"><span class="acento">soy</span> Hermes.</h2>
         <p style="margin-top:24px">Trabajo con dueños de pymes que no tienen tiempo para experimentos. Mi método es corto: detecto qué te quita tiempo, diseño una solución a tu medida y la integro en tu día a día hasta que funciona sola. No necesitas saber programar. Necesitas saber qué te duele. Lo demás lo hacemos juntos, a tu ritmo.</p>
         <p class="paso"><a class="enlace" href="nosotros.html">Conoce al equipo</a> <span aria-hidden="true">·</span> <a class="enlace" href="https://www.instagram.com/ifenzasystems" rel="me noopener" target="_blank">@ifenzasystems</a></p>
       </div>
@@ -591,7 +591,7 @@
     <div class="contenedor">
       <div class="reveal">
         <span class="etiqueta" style="display:block;margin-bottom:24px">Diagnóstico IA</span>
-        <h2 id="t-paso">Siguiente paso</h2>
+        <h2 id="t-paso"><span class="acento">tu</span> siguiente paso</h2>
         <p class="apoyo" style="margin-top:24px">Lo vemos en una llamada de 20 minutos: tú me cuentas qué te quita tiempo y yo te digo si tiene sentido o no. Sin compromiso.</p>
         <div class="cierre-botones">
           <!-- PLACEHOLDER: enlace de calendario (p. ej. https://calendar.app.google/XXXX o https://cal.com/ifenza/diagnostico) -->
@@ -624,11 +624,11 @@
 <footer class="footer bg-tinta">
   <div class="contenedor footer-grid">
     <div>
-      <a class="logo logo-negativo" href="#inicio" aria-label="IFENZA, volver al inicio">
+      <a class="logo logo-negativo" href="#inicio" aria-label="IFENZA SYSTEMS, volver al inicio">
         <svg class="logo-simbolo" viewBox="0 0 100 100" aria-hidden="true" style="--c-onda: var(--lino); --c-carril: var(--ambar)"><use href="#cauce"/></svg>
-        <span class="logo-wordmark">IFENZA</span>
+        <span class="logo-wordmark"><span class="lk-word">IFENZA</span><span class="lk-sub" aria-hidden="true"><span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span><span>S</span></span></span>
       </a>
-      <p class="footer-firma">IFENZA<br>Sistemas inteligentes para empresas.<br>Valencia · España y Latinoamérica</p>
+      <p class="footer-firma">IFENZA SYSTEMS<br>Sistemas inteligentes para empresas.<br>Valencia · España y Latinoamérica</p>
     </div>
     <nav aria-label="Páginas">
       <span class="etiqueta">Web</span>
@@ -656,7 +656,7 @@
     </div>
   </div>
   <div class="contenedor footer-legal">
-    <span>© 2026 IFENZA</span>
+    <span>© 2026 IFENZA SYSTEMS</span>
     <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
   </div>
 </footer>
@@ -683,7 +683,7 @@
 <!-- Menú móvil (se abre con el botón de tres rayas) -->
 <div class="menu-movil" id="menu-movil" data-menu hidden>
   <div class="menu-movil-cabecera">
-    <span class="logo-wordmark">IFENZA</span>
+    <span class="logo-wordmark"><span class="lk-word">IFENZA</span><span class="lk-sub" aria-hidden="true"><span>S</span><span>Y</span><span>S</span><span>T</span><span>E</span><span>M</span><span>S</span></span></span>
     <button class="menu-cerrar" type="button" data-menu-cerrar aria-label="Cerrar el menú">×</button>
   </div>
   <nav class="menu-movil-nav" aria-label="Menú">
@@ -700,6 +700,6 @@
     <a class="enlace" href="mailto:hola@ifenzasystems.com">hola@ifenzasystems.com</a>
   </div>
 </div>
-<script src="main.js?v=13" defer></script>
+<script src="main.js?v=14" defer></script>
 </body>
 </html>
