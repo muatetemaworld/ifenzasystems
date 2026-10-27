@@ -35,8 +35,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=EB+Garamond:ital,wght@1,400..800&family=Pinyon+Script&family=Reenie+Beanie&display=swap" rel="stylesheet">
   <!-- M05 · Preload del CSS; M29 · versionado de assets para invalidar caché al publicar -->
-  <link rel="preload" href="styles.css?v=15" as="style">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="preload" href="styles.css?v=18" as="style">
+  <link rel="stylesheet" href="styles.css?v=18">
 
   <!-- M09 · Datos estructurados: negocio, persona, servicio «Diagnóstico IA» y preguntas frecuentes -->
   <script type="application/ld+json">
@@ -132,6 +132,11 @@
 <!-- ================= HERO (300vh, sticky 100vh, scrub) ================= -->
 <header class="hero is-static" id="inicio" data-hero>
   <div class="hero-sticky">
+    <!-- Vídeo del hero ligado al scroll (currentTime), al 13 % de opacidad sobre la terracota. Sin audio. -->
+    <video class="hero-video" data-hero-video muted playsinline preload="metadata" poster="assets/hero-poster.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+      <source src="assets/hero-video.webm" type="video/webm">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
     <!-- Vídeo del hero, ligado al scroll (currentTime). Sin audio. El canvas Convergencia queda como respaldo (móvil, reduced-motion o si el vídeo no carga).
          AVISO: el clip entregado el 23/10 es generado con IA (oficinas, hologramas, marca de agua «Modificado por IA»); el brandbook pide sustituirlo por el clip Convergencia o rodaje real. Mismo nombre de archivo y listo. -->
     <canvas class="hero-field" aria-hidden="true"></canvas>
@@ -700,6 +705,6 @@
     <a class="enlace" href="mailto:hola@ifenzasystems.com">hola@ifenzasystems.com</a>
   </div>
 </div>
-<script src="main.js?v=14" defer></script>
+<script src="main.js?v=15" defer></script>
 </body>
 </html>

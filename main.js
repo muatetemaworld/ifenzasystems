@@ -182,7 +182,7 @@
       if (videoOn) {
         // El vídeo recorre toda su duración a lo largo del hero y se atenúa en el acto 3 igual que el campo
         seekVideo(Math.min(videoDur - 0.05, p * videoDur));
-        video.style.opacity = String(0.45 * atenua);
+        video.style.opacity = String(0.13 * atenua);
       }
 
       // M24 · La pista de scroll desaparece con el primer 5 %

@@ -1053,7 +1053,7 @@ h2 .acento, h1 .acento { font-size: .55em; margin-right: .1em; vertical-align: b
 
 /* ---------- Hero póster (acto 1) ---------- */
 .hero, .hero-sticky { background: var(--terracota); }
-.hero-video, .hero-field, .hero-veil { display: none !important; }
+.hero-field, .hero-veil { display: none !important; }
 .hero-header .logo, .hero-nav a, .hero-nav .enlace { color: var(--lino); --c-onda: var(--lino) !important; --c-carril: var(--ambar) !important; }
 .hero-nav .enlace { background-image: linear-gradient(var(--ambar), var(--ambar)); }
 .hero-header .menu-btn span { background: var(--lino); }
@@ -1136,3 +1136,27 @@ h2 .acento { display: inline-block; }
 .bio-foto-grande { aspect-ratio: auto; }
 
 .hero-header .logo .logo-simbolo { --c-onda: var(--lino) !important; --c-carril: var(--ambar) !important; }
+
+/* v15.1 · Vídeo scroll de fondo al 13 % sobre la terracota */
+.hero-video { z-index: 0; opacity: 0; filter: grayscale(1) contrast(1.1) brightness(.95); mix-blend-mode: normal; }
+.hero.has-video .hero-video { opacity: .13; }
+.hero-header, .hero-content, .hero-labels, .hero-pista, .hero-persona { z-index: 3; }
+.hero-header { z-index: 5; } .hero-labels { z-index: 4; } .hero-persona { z-index: 4; }
+.hero-sticky::after { z-index: 1; }
+.hero-video { transform: scale(1.32); transform-origin: 88% 12%; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-acento, :root:not([data-theme="light"]) .hero-sub, :root:not([data-theme="light"]) .hero-nav a, :root:not([data-theme="light"]) .hero-header .logo, :root:not([data-theme="light"]) .hero-pista, :root:not([data-theme="light"]) .hero-act3, :root:not([data-theme="light"]) .hero-act3 h2 { color: var(--lino); }
+  :root:not([data-theme="light"]) .hero-header .logo .logo-simbolo { --c-onda: var(--lino) !important; --c-carril: var(--ambar) !important; }
+  :root:not([data-theme="light"]) .hero-act1 .h1 { color: var(--ambar); }
+  :root:not([data-theme="light"]) .hero-label { background: var(--lino); color: var(--tinta); }
+}
+
+/* Hero: colores fijos (la paleta se invierte en modo oscuro y el póster debe quedarse igual) */
+.hero, .hero-sticky { background: #A94D34 !important; }
+.hero-acento, .hero-sub, .hero-nav a, .hero-nav .enlace, .hero-header .logo, .hero-pista, .hero-act3, .hero-act3 h2, .hero-presentadora-pie .etiqueta { color: #F4EFE6 !important; }
+.hero-act1 .h1 { color: #E8B64A !important; }
+.hero-header .logo .logo-simbolo { --c-onda: #F4EFE6 !important; --c-carril: #E8B64A !important; }
+.hero-header .menu-btn span { background: #F4EFE6; }
+.hero-label { background: #F4EFE6 !important; color: #2B2622 !important; } .hero-label .etiqueta { color: #2B2622 !important; } .hero-label svg { stroke: #A94D34 !important; }
+.hero-pista svg { stroke: #F4EFE6; }
+.hero-act3 .btn-secundario { color: #F4EFE6 !important; border-color: #F4EFE6 !important; }
