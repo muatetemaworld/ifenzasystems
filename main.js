@@ -475,7 +475,7 @@
         e.preventDefault();
         var g = function (n) { return (form.querySelector('[name=' + n + ']') || {}).value || ''; };
         var cuerpo = 'Nombre: ' + g('nombre') + '\nEmpresa: ' + g('empresa') + '\nCorreo: ' + g('correo') + '\nWhatsApp: ' + g('whatsapp') + '\nSector: ' + g('sector') + '\n\nQué me quita tiempo:\n' + g('dolor');
-        location.href = 'mailto:hola@ifenzasystems.com?subject=' + encodeURIComponent('Diagnóstico IA · ' + g('empresa')) + '&body=' + encodeURIComponent(cuerpo);
+        location.href = 'mailto:info@ifenzasystems.com?subject=' + encodeURIComponent('Diagnóstico IA · ' + g('empresa')) + '&body=' + encodeURIComponent(cuerpo);
       }
     });
   }
